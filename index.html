@@ -1,0 +1,96 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Home | Parkton Grill on Main</title><style>
+:root{
+ --cream:#f7f0e2; --paper:#fffaf1; --green:#0b351f; --green2:#174a2c;
+ --red:#bd4e32; --ink:#30251c; --muted:#76695c; --line:#dfd3bf;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+a{color:inherit}
+.site-nav{height:72px;background:#fffaf0;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 6.2%;position:sticky;top:0;z-index:20}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand-mark{width:38px;height:38px;border-radius:50%;background:#14502d;color:#fff;display:grid;place-items:center;font-family:Georgia,serif;font-weight:700}
+.brand-title{font-family:Georgia,serif;font-size:19px;font-weight:700;line-height:1}
+.brand-sub{display:block;font-size:8px;letter-spacing:3px;color:#655b50;margin-top:5px}
+.nav-links{display:flex;align-items:center;gap:8px}
+.nav-links a{padding:10px 14px;border-radius:5px;text-decoration:none;font-size:13px;font-weight:700}
+.nav-links a:hover,.nav-links .active{background:#eee5d2}
+.phone{background:var(--red)!important;color:white!important}
+.hero{background:var(--green);color:#fff;min-height:560px;padding:78px 6.2%;display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.eyebrow{font-size:11px;letter-spacing:3px;font-weight:700;color:#cbd7c8;margin-bottom:22px}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif}
+.hero h1{font-size:clamp(50px,5.4vw,78px);line-height:1.02;margin:0 0 24px;max-width:620px}
+.hero-copy{font-size:17px;line-height:1.65;color:#d6ded4;max-width:520px}
+.buttons{display:flex;gap:12px;margin:26px 0}
+.btn{display:inline-block;text-decoration:none;padding:13px 20px;border-radius:4px;font-size:13px;font-weight:800}
+.btn-red{background:var(--red);color:#fff}
+.btn-outline{border:1px solid #718b78;color:#fff}
+.hero-meta{font-size:12px;color:#bdc9be}
+.hero-img{width:100%;height:405px;object-fit:cover;border:3px solid #f2e8d6;border-radius:9px;box-shadow:0 25px 55px #00170b55}
+.section{padding:70px 6.2%;max-width:1280px;margin:auto}
+.section h2{font-size:34px;margin:0 0 8px}
+.underline{width:38px;height:3px;background:var(--red);margin:12px 0 30px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.card img{width:100%;height:230px;object-fit:cover;border-radius:5px}
+.card h3{font-size:20px;margin:15px 0 8px}
+.card p{font-size:13px;line-height:1.65;color:var(--muted);margin:0}
+.info-band{background:#f0e8d8;border-top:1px solid #e4d8c4;border-bottom:1px solid #e4d8c4;padding:65px 6.2%}
+.info-grid{max-width:1280px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.info-card{background:#fffdf8;border:1px solid var(--line);border-radius:6px;padding:30px}
+.info-card h3{font-size:27px;margin:0}.info-card .underline{margin-bottom:20px}
+.hours-row{display:flex;justify-content:space-between;border-bottom:1px dashed #ded1bd;padding:12px 0;font-size:13px}
+.closed{color:var(--red)}
+footer{background:#092719;color:#e6eee5;text-align:center;padding:42px 6.2%;font-size:12px}
+.menu-hero{background:var(--green);color:white;padding:55px 6.2% 48px}
+.menu-hero h1{font-size:50px;margin:0 0 10px}.menu-hero p{max-width:650px;color:#d4ddd3;line-height:1.6}
+.menu-wrap{max-width:1280px;margin:auto;padding:38px 6.2% 80px}
+.pills{display:flex;flex-wrap:wrap;gap:8px;padding-bottom:28px;border-bottom:1px solid var(--line)}
+.pill{padding:8px 14px;border:1px solid var(--line);border-radius:999px;background:#fbf6ec;font-size:12px;font-weight:700}
+.menu-section{margin-top:42px}
+.menu-section h2{font-size:27px;margin:0}.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px 70px}
+.menu-item{padding:0 0 17px;margin-bottom:17px;border-bottom:1px dotted #cdbfa9}
+.menu-item-head{display:flex;align-items:baseline;gap:8px}
+.menu-item-name{font-family:Georgia,serif;font-weight:700;font-size:15px}
+.dots{flex:1;border-bottom:1px dotted #b9ad9a;position:relative;top:-4px}
+.price{font-family:Georgia,serif;font-weight:700;font-size:14px;white-space:nowrap}
+.desc{color:var(--muted);font-size:12px;line-height:1.55;margin-top:5px}
+.options{color:#796d60;font-size:11px;line-height:1.5;margin-top:3px}
+@media(max-width:800px){
+ .site-nav{padding:0 5%;height:auto;min-height:68px}.nav-links a:not(.phone){display:none}
+ .hero{grid-template-columns:1fr;padding:55px 5%;gap:35px}.hero-img{height:300px}.hero h1{font-size:48px}
+ .section{padding:55px 5%}.cards,.info-grid,.menu-grid{grid-template-columns:1fr}.info-band{padding:45px 5%}
+ .menu-wrap{padding:30px 5% 60px}
+}
+</style></head><body><nav class="site-nav">
+<a class="brand" href="index.html"><span class="brand-mark">P</span><span><span class="brand-title">Parkton Grill</span><span class="brand-sub">ON MAIN · HOPE MILLS</span></span></a>
+<div class="nav-links"><a class="active" href="index.html">Home</a><a href="menu.html">Menu</a><a class="phone" href="tel:9102638722">(910) 263-8722</a></div>
+</nav>
+<header class="hero">
+<div>
+<div class="eyebrow">HOPE MILLS, NC · DINER</div>
+<h1>Breakfast &amp; lunch,<br>served all day.</h1>
+<p class="hero-copy">A hometown diner on N Main Street where the grits are creamy, the biscuits are warm, and everybody's a regular.</p>
+<div class="buttons"><a class="btn btn-red" href="menu.html">View the Menu</a><a class="btn btn-outline" href="tel:9102638722">Call (910) 263-8722</a></div>
+<div class="hero-meta">★ 4.3 · Open Mon–Fri from 6 AM · Sat from 7 AM · Closed Sundays</div>
+</div>
+<img class="hero-img" src="assets/hero.jpg" alt="Breakfast sandwich and fries at Parkton Grill">
+</header>
+
+<section class="section">
+<h2>What we're known for</h2><div class="underline"></div>
+<div class="cards">
+<article class="card"><img src="assets/breakfast.jpg" alt="Breakfast plate"><h3>Breakfast All Day</h3><p>Omelets, biscuits &amp; gravy, country-fried steak and bowls — served from open to close.</p></article>
+<article class="card"><img src="assets/burger.jpg" alt="Diner burger and fries"><h3>Big Diner Burgers</h3><p>The Big Daddy with chili and slaw, the 1/2 lb Mega Burger, patty melts and more.</p></article>
+<article class="card"><img src="assets/southern.jpg" alt="Southern-style plate"><h3>Southern Plates</h3><p>Hamburger steak, pork chops and ribeye with two sides and Texas toast.</p></article>
+</div>
+</section>
+
+<section class="info-band"><div class="info-grid">
+<div class="info-card"><h3>Hours</h3><div class="underline"></div>
+<div class="hours-row"><b>Monday</b><span>6:00 AM – 2:00 PM</span></div><div class="hours-row"><b>Tuesday</b><span>6:00 AM – 2:00 PM</span></div><div class="hours-row"><b>Wednesday</b><span>6:00 AM – 2:00 PM</span></div><div class="hours-row"><b>Thursday</b><span>6:00 AM – 2:00 PM</span></div><div class="hours-row"><b>Friday</b><span>6:00 AM – 2:00 PM</span></div><div class="hours-row"><b>Saturday</b><span>7:00 AM – 2:00 PM</span></div><div class="hours-row"><b>Sunday</b><span class="closed">Closed</span></div>
+</div>
+<div class="info-card"><h3>Find us</h3><div class="underline"></div><h2 style="font-size:21px">Parkton Grill on Main</h2><p style="color:var(--muted)">3602 N Main St, Hope Mills, NC 28348</p><div class="buttons"><a class="btn btn-red" href="https://www.google.com/maps/search/?api=1&query=3602+N+Main+St+Hope+Mills+NC+28348">Get Directions</a><a class="btn" style="border:1px solid var(--line)" href="tel:9102638722">(910) 263-8722</a></div><p style="font-size:12px;color:var(--muted)">Take-out available · Wheelchair accessible · Credit cards accepted</p></div>
+</div></section>
+<footer><strong>Parkton Grill on Main</strong><br>3602 N Main St · Hope Mills, NC 28348 · (910) 263-8722</footer>
+</body></html>
